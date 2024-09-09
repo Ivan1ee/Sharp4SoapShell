@@ -2,6 +2,15 @@
 3个 .soap 版本的WebShell，优点：可以运行于子目录，突破了过去只能运行于根目录的限制。3个脚本分别支持哥斯拉/冰蝎/天蝎客户端
 具有广泛的实用性，理论上兼容.NET 2.0 - .NET 4.x 环境
 
+## 背景
+这三款.soap脚本，是专为.NET Framework环境设计的Webshell工具，最引人注目的特点在于克服了传统 *.soap扩展名Webshell只能运行于根目录下的限制。这一技术突破性的进展，使该工具能够灵活运行在服务器的根目录或任意子目录下，即便文件名被更改，其功能依然有效，由于.soap扩展名并不常见，因此该工具在文件系统中具有较高的隐蔽性，有助于攻击者避开安全检测。
+
+我们知道，哥斯拉WebShell工具默认生成的SOAP马和dot.Net安全矩阵星球以前发过的ShellInject.soap无法在子目录下运行，shell.soap只能上传至站点根目录下运行才能正常连接
+
+![image](https://github.com/user-attachments/assets/4bac5ceb-1ce5-4e94-b99b-c5775d0126c9)
+
+因此，结论就是目前的*.soap马，在.NET平台下只能位于站点根目录下才能正常工作解析，传到其他任何一个子目录都会连接报错，这便形成了一个技术瓶颈，急需解决。
+
 ## 适配支持哥斯拉
 通过上传Sharp4SoapGodzillia.soap文件到子目录UploadFiles，可以植入支持哥斯拉的内存马，成功植入后，Sharp4SoapGodzillia能够返回详细的服务器环境信息，包括内存马具体的访问路径、网站当前的绝对路径、.NET Framework版本以及Windows操作系统版本等，为后续的渗透攻击提供了重要参考。
 
