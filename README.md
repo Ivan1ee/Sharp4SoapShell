@@ -11,14 +11,17 @@
 
 因此，结论就是目前的*.soap马，在.NET平台下只能位于站点根目录下才能正常工作解析，传到其他任何一个子目录都会连接报错，这便形成了一个技术瓶颈，急需解决。
 
-## 支持调用cmd.exe
+## 1. 支持调用cmd.exe
 
 默认执行 whoami 命令，可以编辑脚本第18行，修改变量c的值即可
 
 ![image](https://github.com/user-attachments/assets/336bb323-fc85-41d4-a881-f9b958af5221)
 
 
-## 适配支持哥斯拉
+## 2. 适配支持哥斯拉
+
+### 2.1 Sharp4SoapGodzilla.soap
+
 通过上传Sharp4SoapGodzillia.soap文件到子目录UploadFiles，可以植入支持哥斯拉的内存马，成功植入后，Sharp4SoapGodzillia能够返回详细的服务器环境信息，包括内存马具体的访问路径、网站当前的绝对路径、.NET Framework版本以及Windows操作系统版本等，为后续的渗透攻击提供了重要参考。
 
 ![image](https://github.com/user-attachments/assets/6c395989-def9-4151-ab6a-d9bfb899572b)
@@ -28,12 +31,21 @@
 
 ![image](https://github.com/user-attachments/assets/c88d1231-6203-417f-aa93-b2e4809506dc)
 
-## 适配支持冰蝎
+
+### 2.2 Sharp4SoapRootShell.soap
+
+众所周知，哥斯拉的某个版本客户端支持根目录下soap马的连接，并且可以生成 SOAP Webshell，但有个局限性，该 Webshell 必须部署在网站根目录下才能运行。然而，在某些特定场景中，需要使用 Sharp4SoapRootShell.soap 在根目录下生成一个名为 SoapRootShell4Godzilla.soap 的 Webshell，专门用于哥斯拉客户端的连接。默认连接密码为 pass。
+
+![image](https://github.com/user-attachments/assets/533cd7a7-a50c-4afa-a29c-2a2fad46d906)
+
+![image](https://github.com/user-attachments/assets/fead0203-d387-4475-9918-ce723eeef075)
+
+## 3. 适配支持冰蝎
 Sharp4SoapBehinder.soap作为冰蝎Webshell的服务端脚本，在此基础上进行了优化和扩展。通过上传Sharp4SoapBehinder.soap文件到子目录UploadFiles，可以植入支持冰蝎的内存马，从图上soap Webshell 返回的信息，我们可以得知支持冰蝎工具的内存马访问路径为 uploadfiles/dotNetMatrix/Behinder.aspx，打开冰蝎客户端Behinder.jar测试连接效果，连接密码：rebeyond，返回站点环境变量基本信息。如下图所示。
 
 ![image](https://github.com/user-attachments/assets/c0b13c75-6a6c-4996-94f6-28d8139a2651)
 
-## 适配支持天蝎
+## 4. 适配支持天蝎
 Sharp4SoapSky.soap与天蝎Webshell管理工具无缝连接，能够充分利用天蝎提供的所有功能，包括但不限于命令执行、文件上传下载等，通过上传Sharp4SoapSky.soap文件到子目录UploadFiles，可以植入支持天蝎客户端工具的内存马，内存马路径：uploadfiles/dotNetMatrix/Sky.aspx ，打开天蝎权限管理工具.jar测试连接效果，连接密码：sky，点击验证后，下方状态栏返回连接成功。如下图所示。
 
 ![image](https://github.com/user-attachments/assets/660bd99c-2b1d-4aba-b4b4-21f49bb626f1)
