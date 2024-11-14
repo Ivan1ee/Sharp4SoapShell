@@ -61,6 +61,8 @@ Sharp4SoapSky.soap与天蝎Webshell管理工具无缝连接，能够充分利用
 
 # 更新日志
 
+- 2024-11-13 
+  - [更新 | 适配天蝎的修正版 SoapWebShell](https://mp.weixin.qq.com/s/xTlUQsOXf4RkN6jsW9s69A)
 - 2024-10-14 
   - [.NET SoapShell 更新 | 发布增强免杀版适配哥斯拉客户端的WebShell](https://mp.weixin.qq.com/s/RUinIKDpDa7yIAfoddFl-w)
 - 2024-09-20 
