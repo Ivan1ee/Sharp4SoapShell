@@ -50,10 +50,9 @@ Sharp4SoapSky.soap与天蝎Webshell管理工具无缝连接，能够充分利用
 
 ![image](https://github.com/user-attachments/assets/660bd99c-2b1d-4aba-b4b4-21f49bb626f1)
 
-## 压缩包密码获取和互动交流
-能帮到大家我们团队很开心，建群的初心是为了相互交流，加群后可以查看群置顶公告获取压缩包密码。另外本群讨论话题主要聚焦于该工具，但也包括 .NET 安全大领域技术的知识交流。识别下方二维码，或者满员后，通过关注dot.Net安全矩阵公众号给我们反馈留言，我们后续会更新微信群二维码（2025.08.06 已更新）邀请大伙入群。
+## 互动交流
+能帮到大家我们团队很开心，写作和分享的初心是为了相互交流，请扫描二维码关注 dot.Net安全矩阵 公众号。
 
-<img width="317" height="387" alt="image" src="https://github.com/user-attachments/assets/d257af71-ddff-425c-b300-93edc5167550" />
+<img width="159" height="156" alt="image" src="https://github.com/user-attachments/assets/7ce37734-84d8-4341-8f45-bee3aba2081d" />
 
-
-最后，希望大伙爱护这个开放的大家庭，愿我们一起相互学习，共同进步！
+我们也会不定期在知识星球里更新此工具，以及在公众号上分享更多与 .NET 安全相关的学习工具、资料和实战经验。
